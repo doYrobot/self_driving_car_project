@@ -1,0 +1,15 @@
+# Python:
+*.py[cod]
+*.so
+*.egg
+*.egg-info
+dist
+build
+sbgl_jerrywang/sbgl_jerrywang/__pycache__/wsgi.cpython-36.pyc
+sbgl_jerrywang/sbgl_jerrywang/__pycache__/urls.cpython-36.pyc
+sbgl_jerrywang/sbgl_jerrywang/__pycache__/settings.cpython-36.pyc
+sbgl_jerrywang/sbgl_jerrywang/__pycache__/__init__.cpython-36.pyc
+sbgl_jerrywang/sbgl_jerrywang/__pycache__/settings.cpython-36.pyc
+__pycache__
+*.p
+*.zip
