@@ -23,7 +23,7 @@ with open('../../self-driving_car_engineer/car_data/driving_log.csv') as csvfile
         lines.append(line)
         # samples.append(line) # for generator
 
-correction = 0.25
+correction = 0.15
 images = []
 measurements = []
 
@@ -149,12 +149,12 @@ model.add(Dropout(0.5))
 model.add(Dense(units=10, activation='relu'))
 model.add(Dense(1)) # 全连接层
 
-plot_model(model, to_file='model.png', show_shapes=True)
+# plot_model(model, to_file='model.png', show_shapes=True)
 
-adam = Adam(lr=0.0005, beta_1=0.9, beta_2=0.999, epsilon=1e-08)
+adam = Adam(lr=0.0004, beta_1=0.9, beta_2=0.999, epsilon=1e-08)
 
 model.compile(loss='mse', optimizer=adam)
-history_object=model.fit(X_train, y_train, validation_split=0.1,shuffle=True, epochs=10, batch_size=256)
+history_object=model.fit(X_train, y_train, validation_split=0.1,shuffle=True, epochs=30, batch_size=128)
 
 # for generator
 # history_object = model.fit_generator(train_generator, samples_per_epoch=len(train_samples)*6,
